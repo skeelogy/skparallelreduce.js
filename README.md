@@ -1,15 +1,25 @@
 skparallelreduce.js
-=========
+===================
 
-A JavaScript/GLSL library for performing parallel reductions in Three.js.
+### Introduction
 
-This is useful if you need to do binary operations, such as a sum, on the data of a GPU texture.
+This is a JavaScript/GLSL library for performing parallel reductions in Three.js. It is useful if you need to do binary reduction operations, such as a sum, on the data of a GPU texture / render target.
 
-It is possible to extract the final reduced results out to the CPU as floating-point values, if necessary.
+### Features
 
-Currently supported binary operations:
+* Supported binary operations: sum
+* Extract the final reduced results out to the CPU as floating-point values, if necessary
 
- * sum
+### Examples
+
+* [Parallel Sum Reduction](examples/sum.html)
+
+### Documentation
+
+* [1.0.2](docs/1.0.2)
+
+### License
 
 Released under The MIT License (MIT)<br/>
-Copyright (c) 2013 Skeel Lee ([http://cg.skeelogy.com](http://cg.skeelogy.com))
+Copyright (c) 2013 Skeel Lee ([http://cg.skeelogy.com](http://cg.skeelogy.com)) @skeelogy
+

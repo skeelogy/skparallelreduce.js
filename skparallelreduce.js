@@ -1,7 +1,7 @@
 /**
  * @fileOverview JavaScript/GLSL parallel reduction for Three.js
  * @author Skeel Lee <skeel@skeelogy.com>
- * @version 1.0.1
+ * @version 1.0.2
  *
  * @example
  * //create a parallel reducer
@@ -29,7 +29,7 @@
 /**
  * @namespace
  */
-var SKPR = SKPR || { version: '1.0.1' };
+var SKPR = SKPR || { version: '1.0.2' };
 console.log('Using SKPR ' + SKPR.version);
 
 /**
@@ -74,8 +74,11 @@ SKPR.ParallelReducer = function (renderer, res, stopRes) {
 };
 SKPR.ParallelReducer.prototype.__checkExtensions = function () {
     var context = this.__renderer.context;
-    if (!context.getExtension('OES_texture_float_linear')) {
-        throw new Error('Extension not available: OES_texture_float_linear');
+    var extension = 'OES_texture_float';
+    if (!context.getExtension(extension)) {
+        var msg = 'Extension not available: ' + extension;
+        alert(msg);
+        throw new Error(msg);
     }
 };
 SKPR.ParallelReducer.prototype.__init = function () {
