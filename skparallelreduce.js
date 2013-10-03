@@ -1,7 +1,7 @@
 /**
  * @fileOverview JavaScript/GLSL parallel reduction for Three.js
  * @author Skeel Lee <skeel@skeelogy.com>
- * @version 1.0.2
+ * @version 1.0.3
  *
  * @example
  * //create a parallel reducer
@@ -29,7 +29,7 @@
 /**
  * @namespace
  */
-var SKPR = SKPR || { version: '1.0.2' };
+var SKPR = SKPR || { version: '1.0.3' };
 console.log('Using SKPR ' + SKPR.version);
 
 /**
@@ -74,12 +74,23 @@ SKPR.ParallelReducer = function (renderer, res, stopRes) {
 };
 SKPR.ParallelReducer.prototype.__checkExtensions = function () {
     var context = this.__renderer.context;
-    var extension = 'OES_texture_float';
-    if (!context.getExtension(extension)) {
-        var msg = 'Extension not available: ' + extension;
+
+    //determine floating point texture support
+    //https://www.khronos.org/webgl/public-mailing-list/archives/1306/msg00002.html
+
+    //get floating point texture support
+    if (!context.getExtension('OES_texture_float')) {
+        var msg = 'No support for floating point textures. Extension not available: OES_texture_float';
         alert(msg);
         throw new Error(msg);
     }
+
+    //NOTE: we do not need linear filtering in this file
+    // //get floating point linear filtering support
+    // this.supportsTextureFloatLinear = context.getExtension('OES_texture_float_linear') !== null;
+    // if (!this.supportsTextureFloatLinear) {
+        // console.log('OES_texture_float available but not OES_texture_float_linear');
+    // }
 };
 SKPR.ParallelReducer.prototype.__init = function () {
     this.__setupRttScene();

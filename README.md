@@ -16,7 +16,7 @@ This is a JavaScript/GLSL library for performing parallel reductions in Three.js
 
 ### Documentation
 
-* [1.0.2](http://skeelogy.github.io/skparallelreduce.js/docs/1.0.2)
+* [1.0.3](http://skeelogy.github.io/skparallelreduce.js/docs/1.0.3)
 
 ### License
 
