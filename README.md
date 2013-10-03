@@ -12,11 +12,11 @@ This is a JavaScript/GLSL library for performing parallel reductions in Three.js
 
 ### Examples
 
-* [Parallel Sum Reduction](examples/sum.html)
+* [Parallel Sum Reduction](http://skeelogy.github.io/skparallelreduce.js/examples/sum.html)
 
 ### Documentation
 
-* [1.0.2](docs/1.0.2)
+* [1.0.2](http://skeelogy.github.io/skparallelreduce.js/docs/1.0.2)
 
 ### License
 
