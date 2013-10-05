@@ -8,15 +8,15 @@ This is a JavaScript/GLSL library for performing parallel reductions in Three.js
 ### Features
 
 * Supported parallel reduction operations: sum
-* Extract the final reduced results out to the CPU as floating-point values, if necessary
+* Extract final reduced results out to the CPU as floating-point values, if necessary
 
 ### Examples
 
-* [Parallel Sum Reduction](http://skeelogy.github.io/skparallelreduce.js/examples/sum.html)
+* [Parallel Sum Reduction](http://skeelogy.github.io/skparallelreduce.js/examples/skparallelreduce_sum.html)
 
 ### Documentation
 
-* [1.0.3](http://skeelogy.github.io/skparallelreduce.js/docs/1.0.3)
+* [1.0](http://skeelogy.github.io/skparallelreduce.js/docs/1.0)
 
 ### License
 
