@@ -18,6 +18,10 @@ This is a JavaScript / GLSL library for performing parallel reductions on the GP
 
 * [1.0.x](http://skeelogy.github.io/skparallelreduce.js/docs/1.0.x)
 
+### Browser Support
+
+Tested only in Google Chrome (recommended) and Mozilla FireFox
+
 ### License
 
 Released under The MIT License (MIT)<br/>
